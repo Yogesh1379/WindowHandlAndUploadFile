@@ -56,9 +56,9 @@ co.addArguments("-start-maximized");
 			System.out.println(txt);
 		}
 		
-			
+		Thread.sleep(4000);	
 		
-		//driver.quit();
+		driver.quit();
 	}
 
 }

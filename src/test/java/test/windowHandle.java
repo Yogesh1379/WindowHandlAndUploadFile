@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 
 public class windowHandle {
 	@Test
-	public void wondow()
+	public void wondow() throws InterruptedException
 	{
 		ChromeOptions co = new ChromeOptions();
 		
@@ -87,7 +87,9 @@ public class windowHandle {
 				
 			}
 		}
+Thread.sleep(4000);	
 		
+		driver.quit();
 		
 	}
 
