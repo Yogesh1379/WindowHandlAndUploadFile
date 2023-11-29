@@ -11,7 +11,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.Test;
 
 public class windowHandle {
-	@Test
+	@Test (invocationCount = 4)
 	public void wondow() throws InterruptedException
 	{
 		ChromeOptions co = new ChromeOptions();
@@ -63,7 +63,7 @@ public class windowHandle {
 		int yAxix = point.getY();
 		
 		jse.executeScript("window.scrollBy("+xAxix+","+yAxix+")");
-		*/
+		//*/
 		driver.findElement(By.xpath("//a[.='Watch the Videos']")).click();
 		String secondWindow = driver.getWindowHandle();
 		
@@ -79,7 +79,7 @@ public class windowHandle {
 				String ss = driver.getTitle();
 				System.out.println(ss);
 				driver.findElement(By.xpath("(//div[@class='yt-spec-touch-feedback-shape__fill'])[4]")).click();
-				
+				driver.close();
 			}
 			}
 			else

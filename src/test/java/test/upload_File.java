@@ -14,7 +14,7 @@ import org.testng.annotations.Test;
 
 public class upload_File {
 
-	@Test
+	@Test(invocationCount = 3,enabled = true)
 	public void one() throws InterruptedException, IOException
 	{
 ChromeOptions co = new ChromeOptions();
